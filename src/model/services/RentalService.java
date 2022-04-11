@@ -3,13 +3,13 @@ package model.services;
 import model.entities.CarRental;
 import model.entities.Invoice;
 
-public class RentalServise {
+public class RentalService {
 	private Double pricePerDay;
 	private Double pricePerHour;
 	
-	private BrazilTaxServise taxService;
+	private TaxService taxService;
 
-	public RentalServise(Double pricePerDay, Double pricePerHour, BrazilTaxServise taxService) {
+	public RentalService(Double pricePerDay, Double pricePerHour, TaxService taxService) {
 		this.pricePerDay = pricePerDay;
 		this.pricePerHour = pricePerHour;
 		this.taxService = taxService;

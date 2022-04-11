@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 import model.entities.CarRental;
 import model.entities.Vehicle;
-import model.services.BrazilTaxServise;
-import model.services.RentalServise;
+import model.services.BrazilTaxService;
+import model.services.RentalService;
 
 public class Program {
 
@@ -33,7 +33,7 @@ public class Program {
 		System.out.print("Enter price per day: ");
 		double pricePerDay = sc.nextDouble();
 		
-		RentalServise rentalService = new RentalServise(pricePerDay, pricePerHour, new BrazilTaxServise());
+		RentalService rentalService = new RentalService(pricePerDay, pricePerHour, new BrazilTaxService());
 		
 		rentalService.processInvoice(cr);
 		
